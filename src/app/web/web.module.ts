@@ -7,6 +7,9 @@ import { SharedModule } from '../shared/shared.module';
 import { WebComponent } from './web.component';
 import { WebRoutingModule } from './web-routing.module';
 import { AppRoutingModule } from '../app-routing.module';
+import { RouterModule } from '@angular/router';
+import { MarcaComponent } from './marca/marca.component';
+import { PrecioComponent } from './precio/precio.component';
 
 
 
@@ -17,19 +20,24 @@ import { AppRoutingModule } from '../app-routing.module';
     ProductComponent,
     DashboardComponent,
     WebComponent,
+    MarcaComponent,
+    PrecioComponent,
   ],
   imports: [
     CommonModule,
     SharedModule,
     AppRoutingModule,
-    WebRoutingModule
+    WebRoutingModule,
+    RouterModule
   ], 
   exports:[
     CategoryComponent,
     ProductComponent,
     DashboardComponent,
     WebComponent,
-    WebRoutingModule
+    WebRoutingModule,
+    MarcaComponent,
+    PrecioComponent
   ]
 })
 export class WebModule { }
